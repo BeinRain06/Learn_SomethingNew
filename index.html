@@ -4,10 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/c5a04a70d0.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./resources/css/style.css">
-  <link rel="stylesheet" href="./resources/js/main.js">
   <title> COLMAR ACADEMY</title>
 </head>
 <body>
@@ -21,10 +18,10 @@
           </div>   
         </div>
         <ul>
-          <li><a href="#" id="log_s1" class="log_section current">On Campus</a></li>
-          <li><a href="#"  class="log_section current">Online</a></li>
-          <li><a href="#"  class="log_section current">or companies</a></li>
-          <li><a href="#"  class="log_section current">Sign in</a></li>
+          <li><a href="index.html" id="log_s1" class="log_section current">On Campus</a></li>
+          <li><a href="index.html"  class="log_section">Online</a></li>
+          <li><a href="index.html"  class="log_section">or companies</a></li>
+          <li><a href="#"  class="log_section">Sign in</a></li>
         </ul>   
       </div>
       <div class="navbar_mobile">
@@ -280,7 +277,7 @@
                 <source src="./video/VID-20220403-WA0030.mp4" type="video/mp4" >
               </video>
               <div class="control_bar">
-                <button id="play" ><i class="fas fa-play"></i> </button>
+                <button id="play" ><i class="fa-solid fa-play"></i>pause</button>
                 <span id="videoTime"></span> / <span id= "videoDuration"></span>
                 <input type="range" id="range" value="0">
               </div>
@@ -328,12 +325,10 @@
     <p> Terms  Privacy</p>
   </footer> 
 
+  <script src="resources\js\main.js"></script>
   
-
-  <script type="text/javascript">
-    $(document).on('click', 'ul li', function(){
-      $(this).addClass('current').siblings().removeClass('current')
-    })
-  </script>
+  <script src="https://kit.fontawesome.com/c5a04a70d0.js" crossorigin="anonymous"></script>
+  
+ 
 </body>
 </html>
