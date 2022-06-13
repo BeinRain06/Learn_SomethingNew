@@ -42,26 +42,47 @@ play.addEventListener('click', function(){
     life_video.pause();
     document.querySelector('#play ').innerHTML = 'Play';
   }
-})
-  
+});
+
+ 
 
 range.addEventListener('input', function(){
-  life_video.currentTime = range.value;
+  range.value = Math.floor(life_video.currentTime);
   range.max = Math.floor(life_video.duration);
-})
+});
+ 
 
 life_video.addEventListener('timeupdate', function(){
 
   videoTime.innerHTML= Math.floor(life_video.currentTime);
   range.value = life_video.currentTime;
   range.max = Math.floor(life_video.duration);
-})
+});
+
+
 
 window.onload = function(){
   videoTime.innerHTML= Math.floor(life_video.currentTime);
   videoDuration.innerHTML = Math.floor(life_video.duration);
 
+  play.addEventListener('timeupdate', function(){
+
+   setInterval(changeInnerTextBtn, 2000);  
+    
+  });
+
+  function changeInnerTextBtn(){
+    if(range.value === range.max || life_video.ended){
+  
+      let landingText = setInterval(changeInnerTextBtn, 2000); 
+      document.querySelector('#play').innerHTML = 'Play';
+      clearInterval(landingText);
+
+      }
+  }
 }
+
+
 
 
 
